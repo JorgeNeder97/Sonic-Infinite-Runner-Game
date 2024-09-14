@@ -60,7 +60,7 @@ export default function game() {
     // event listeners, esta por defecto pero si no lo escribimos no lo podemos acceder.
     sonic.onCollide("enemy", (enemy) => {
         if (!sonic.isGrounded()) {
-            k.play("destroy", { volume: 0.1 });
+            k.play("destroy", { volume: 0.5 });
             k.play("hyper-ring", { volume: 0.1 });
             k.destroy(enemy);
             // Aqui play esta usandose sobre un objeto del juego y no sobre un contexto.
